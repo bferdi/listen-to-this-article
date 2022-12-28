@@ -26,12 +26,13 @@ function listen_to_this_article_meta_box() {
     'listen-to-this-article-meta-box', // ID of the meta box
     'Listen to this article', // Title of the meta box
     'listen_to_this_article_meta_box_callback', // Callback function
-    'post', // Post type
+    array('post', 'page'), // Post type
     'side', // Context
     'default' // Priority
   );
 }
 add_action('add_meta_boxes', 'listen_to_this_article_meta_box');
+
 
 // Display the "disable" custom field in the post editor
 function listen_to_this_article_meta_box_callback($post) {
